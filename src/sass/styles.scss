@@ -5,6 +5,9 @@
 @import 'fonts';
 @import 'variables';
 @import 'helper';
+@import 'modules/content';
+@import 'modules/header';
+@import 'modules/navigation';
 
 img {max-width: 100%;}
 
@@ -15,9 +18,7 @@ img {max-width: 100%;}
 }
 
 body {
-  background: $bg-color;
-  color: $text-color;
-  font-family: $regular;
+  font-family: 'Roboto', sans-serif;
 }
 
 p {
@@ -26,4 +27,12 @@ p {
 
 p + p {
   margin-top: 10px;
+}
+
+html, body {
+  height: 100%;
+}
+
+main {
+  min-height: 100%;
 }
