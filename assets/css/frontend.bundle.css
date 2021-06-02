@@ -1184,7 +1184,7 @@ html {
   display: table-cell !important;
 }
 
-.d-flex {
+.d-flex, .nav a, .logo-holder, .header .user, .header .user-info .user-menu a {
   display: flex !important;
 }
 
@@ -1433,7 +1433,7 @@ html {
   justify-content: flex-end !important;
 }
 
-.justify-content-center {
+.justify-content-center, .logo-holder, .header .user {
   justify-content: center !important;
 }
 
@@ -1453,7 +1453,7 @@ html {
   align-items: flex-end !important;
 }
 
-.align-items-center {
+.align-items-center, .nav a, .logo-holder, .header .user, .header .user-info .user-menu a {
   align-items: center !important;
 }
 
@@ -4402,7 +4402,7 @@ html {
   padding: 0 31px;
 }
 
-.flex-container, .logo-holder, .content-holder {
+.flex-container, .content-holder {
   display: flex;
 }
 
@@ -4418,7 +4418,70 @@ html {
   height: 100%;
 }
 .content-holder .content {
+  width: 100%;
   height: 100vh;
+}
+
+.header {
+  border-bottom: 1px solid #bdc3c7;
+  padding: 15px 30px;
+  margin-bottom: 30px;
+}
+.header .user-info {
+  cursor: pointer;
+  position: relative;
+}
+.header .user-info .more-icon {
+  transition: transform 0.3s;
+}
+.header .user-info span {
+  margin-right: 10px;
+  font-size: 14px;
+  pointer-events: none;
+}
+.header .user-info span:last-child {
+  margin-right: 0;
+}
+.header .user-info span.user-name {
+  font-size: 14px;
+}
+.header .user-info.active-menu .more-icon {
+  transform: rotate(-180deg);
+}
+.header .user-info.active-menu .user-menu {
+  display: block;
+}
+.header .user-info .user-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 200px;
+  background: #ecf0f1;
+  padding: 10px;
+  display: none;
+}
+.header .user-info .user-menu a {
+  padding: 10px;
+  color: #2c3e50;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.header .user-info .user-menu a:hover {
+  color: #e74c3c;
+}
+.header .user-info .user-menu a span {
+  margin-right: 10px;
+}
+.header .user {
+  background: #ecf0f1;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.header .user span {
+  color: #2c3e50;
+  font-size: 18px;
 }
 
 .nav-holder {
@@ -4429,8 +4492,6 @@ html {
 }
 
 .logo-holder {
-  justify-content: center;
-  align-items: center;
   margin-top: 20px;
   cursor: default;
   border-bottom: 1px solid #34495e;
@@ -4442,9 +4503,10 @@ html {
 }
 
 .logo-text {
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
   font-size: 14px;
+  letter-spacing: 2px;
 }
 
 .nav-logo {
@@ -4495,7 +4557,7 @@ html {
   display: block;
   transition: background 0.3s;
 }
-.nav a i {
+.nav a span {
   margin-right: 10px;
 }
 .nav a:hover {

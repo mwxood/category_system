@@ -7,9 +7,9 @@
 }
 
 .logo-holder {
-    @extend .flex-container;
-    justify-content: center;
-    align-items: center;
+    @extend .d-flex;
+    @extend .justify-content-center;
+    @extend .align-items-center;
     margin-top: 20px;
     cursor: default;
     border-bottom: 1px solid #34495e;
@@ -23,9 +23,10 @@
 }
 
 .logo-text {
-    font-weight: 400;
+    font-weight: 500;
     text-transform: uppercase;
     font-size: 14px;
+    letter-spacing: 2px;
 }
 
 .nav-logo {
@@ -72,12 +73,14 @@
         }
     }
     a {
+        @extend .d-flex;
+        @extend .align-items-center;
         padding: 10px 20px;
         color:#fff;
         text-decoration: none;
         display: block;
         transition: background .3s;
-        i {
+        span {
             margin-right: 10px;
         }
         &:hover {
