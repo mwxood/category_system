@@ -25,6 +25,19 @@
                         </div><!--end col-md-12-->
                     </div><!--end row-->
                 </header><!--end header-->
+
+                <div class="main-content">
+                  <h1>Dashboard</h1>
+                    <ul class="category-group">
+                        <li>
+                            <a href="#">
+                                
+                            </a>
+                        </li>
+
+                        
+                    </ul><!--end category-group-->
+                </div><!--end main-content-->
             </div><!--end content-->
         </div>
     </main>
