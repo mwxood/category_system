@@ -1,16 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Merkando</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
-
-    <link rel="stylesheet" href="assets/css/frontend.bundle.css">
-</head>
-<body>
-
+<header class="header">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="d-flex justify-content-between">
+                                 <div class=""></div>
+                                 <div class="user-info d-flex align-items-center">
+                                    <span class="user">
+                                        <span class="material-icons">person</span>
+                                    </span>
+                                    <span class="user-name">Name</span>
+                                    <span class="material-icons more-icon">expand_more</span>
+                                    <div class="user-menu">
+                                        <a href="#">
+                                        <span class="material-icons">logout</span>    
+                                         Logout</a>
+                                    </div><!--edn user-menu-->
+                                </div>
+                            </div><!--end d-flex-->
+                        </div><!--end col-md-12-->
+                    </div><!--end row-->
+                </header><!--end header-->

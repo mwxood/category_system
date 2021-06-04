@@ -44,3 +44,121 @@
 
   }
 }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid $border-color;
+  tr {
+    transition: background .3s;
+  }
+  thead {
+    tr  {
+      background: $primary-color;
+      color: #fff;
+    }
+  }
+  td {
+    padding: 20px;
+    border: 1px solid $border-color;
+    text-align: center;
+  }
+
+  tbody {
+    tr {
+      &:hover {
+        background: $border-light;
+      }
+    }
+  }
+}
+
+.btn {
+  padding: 10px;
+  @extend .d-flex;
+  @extend .justify-content-center;
+  @extend .align-items-center;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  transition: all .3s;
+  max-width: 200px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  &.btn-center {
+    max-width: 150px;
+    width: 100%;
+    margin: auto;
+  }
+
+  &:focus {
+    outline: none;
+  }
+  span {
+    margin-right: 10px;
+  }
+  &.btn-danger {
+    background: #e74c3c;
+    &:hover {
+      background: #c0392b;
+    }
+  }
+
+  &.btn-primary {
+    background: #3498db;
+    &:hover {
+      background: #2980b9;
+    }
+  }
+
+  &.btn-warning {
+    background: #f1c40f;
+    &:hover {
+      background: #f39c12;
+    }
+  }
+
+  &.btn-success {
+    background: #2ecc71;
+    &:hover {
+      background: #27ae60;
+    }
+  }
+}
+
+.input-title {
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  @extend .d-flex;
+  @extend .justify-content-between;
+  width: 100%;
+  flex-wrap: wrap;
+
+  label {
+    width: 49%;
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+
+.input-bg {
+  width: 100%;
+  border: 1px solid $border-light;
+  padding: 15px;
+  font-size: 16px;
+  transition: border .3s;
+  &::placeholder {
+    font-size: 16px;
+  }
+
+  &:focus, &:hover {
+    outline: none;
+    border: 1px solid $border-color;
+    border-radius: none;
+  }
+}

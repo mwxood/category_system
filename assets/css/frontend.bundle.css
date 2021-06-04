@@ -1183,7 +1183,7 @@ html {
   display: table-cell !important;
 }
 
-.d-flex, .nav a, .logo-holder, .header .user, .header .user-info .user-menu a {
+.d-flex, .category-group li a .material-icons, .category-group li a, .category-group li, .category-group, .nav a, .logo-holder, .header .user, .header .user-info .user-menu a, .form-group, .btn {
   display: flex !important;
 }
 
@@ -1432,11 +1432,11 @@ html {
   justify-content: flex-end !important;
 }
 
-.justify-content-center, .logo-holder, .header .user {
+.justify-content-center, .category-group li a, .category-group li, .logo-holder, .header .user, .btn {
   justify-content: center !important;
 }
 
-.justify-content-between {
+.justify-content-between, .category-group, .form-group {
   justify-content: space-between !important;
 }
 
@@ -1452,7 +1452,7 @@ html {
   align-items: flex-end !important;
 }
 
-.align-items-center, .nav a, .logo-holder, .header .user, .header .user-info .user-menu a {
+.align-items-center, .category-group li a .material-icons, .category-group li, .nav a, .logo-holder, .header .user, .header .user-info .user-menu a, .btn {
   align-items: center !important;
 }
 
@@ -2184,7 +2184,7 @@ html {
   margin: 3rem !important;
 }
 
-.mt-5,
+.mt-5, .category-group,
 .my-5 {
   margin-top: 3rem !important;
 }
@@ -2194,7 +2194,7 @@ html {
   margin-right: 3rem !important;
 }
 
-.mb-5,
+.mb-5, .category-group,
 .my-5 {
   margin-bottom: 3rem !important;
 }
@@ -4267,6 +4267,106 @@ html {
 .custom-btn i {
   margin-left: 10px;
 }
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #bdc3c7;
+}
+.table tr {
+  transition: background 0.3s;
+}
+.table thead tr {
+  background: #2c3e50;
+  color: #fff;
+}
+.table td {
+  padding: 20px;
+  border: 1px solid #bdc3c7;
+  text-align: center;
+}
+.table tbody tr:hover {
+  background: #ecf0f1;
+}
+
+.btn {
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s;
+  max-width: 200px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+.btn.btn-center {
+  max-width: 150px;
+  width: 100%;
+  margin: auto;
+}
+.btn:focus {
+  outline: none;
+}
+.btn span {
+  margin-right: 10px;
+}
+.btn.btn-danger {
+  background: #e74c3c;
+}
+.btn.btn-danger:hover {
+  background: #c0392b;
+}
+.btn.btn-primary {
+  background: #3498db;
+}
+.btn.btn-primary:hover {
+  background: #2980b9;
+}
+.btn.btn-warning {
+  background: #f1c40f;
+}
+.btn.btn-warning:hover {
+  background: #f39c12;
+}
+.btn.btn-success {
+  background: #2ecc71;
+}
+.btn.btn-success:hover {
+  background: #27ae60;
+}
+
+.input-title {
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  width: 100%;
+  flex-wrap: wrap;
+}
+.form-group label {
+  width: 49%;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.input-bg {
+  width: 100%;
+  border: 1px solid #ecf0f1;
+  padding: 15px;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+.input-bg::placeholder {
+  font-size: 16px;
+}
+.input-bg:focus, .input-bg:hover {
+  outline: none;
+  border: 1px solid #bdc3c7;
+  border-radius: none;
+}
+
 .content-holder {
   height: 100%;
 }
@@ -4277,6 +4377,7 @@ html {
 
 .main-content {
   padding: 0 35px;
+  margin-left: 300px;
 }
 
 .header {
@@ -4346,6 +4447,8 @@ html {
   background: #2c3e50;
   width: 100%;
   color: #fff;
+  position: fixed;
+  height: 100%;
 }
 
 .logo-holder {
@@ -4421,6 +4524,42 @@ html {
   background: #34495e;
 }
 
+.category-group {
+  list-style: none;
+  flex-wrap: wrap;
+}
+.category-group li {
+  min-height: 200px;
+  width: 32%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: all 0.3s;
+  margin-bottom: 30px;
+}
+.category-group li:hover {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.category-group li a {
+  color: #2c3e50;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+}
+.category-group li a .material-icons {
+  font-size: 100px;
+  display: block;
+}
+.category-group li a .category-title {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.category-group li a:hover {
+  color: #e74c3c;
+}
+
 img {
   max-width: 100%;
 }
@@ -4451,6 +4590,11 @@ main {
   min-height: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
 h1 {
   font-size: 36px;
 }
@@ -4473,4 +4617,8 @@ h5 {
 
 h6 {
   font-size: 16px;
+}
+
+a {
+  transition: color 0.3s;
 }
